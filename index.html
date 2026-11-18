@@ -1,0 +1,76 @@
+
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Egyptian AI - المساعد الذكي المصري</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #101827;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #1d293b;
+      padding: 25px;
+      border-radius: 18px;
+    }
+    h1 { color: #35d0a0; }
+    p { line-height: 1.8; }
+    input {
+      width: 90%;
+      padding: 14px;
+      border: 0;
+      border-radius: 10px;
+      margin: 15px 0;
+      font-size: 16px;
+    }
+    button {
+      background: #20b889;
+      color: white;
+      border: 0;
+      padding: 13px 30px;
+      border-radius: 10px;
+      font-size: 17px;
+    }
+    #reply {
+      margin-top: 20px;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🇪🇬 Egyptian AI</h1>
+    <h2>المساعد الذكي المصري</h2>
+    <p>أهلاً بيك! أنا مساعدك الذكي المصري.</p>
+    <input id="message" type="text" placeholder="اكتب رسالتك هنا">
+    <br>
+    <button onclick="sendMessage()">إرسال</button>
+    <div id="reply"></div>
+  </div>
+
+  <script>
+    function sendMessage() {
+      const message = document.getElementById("message").value.trim();
+      const reply = document.getElementById("reply");
+
+      if (!message) {
+        reply.textContent = "اكتب رسالتك الأول.";
+        return;
+      }
+
+      reply.textContent =
+        "وصلت رسالتك بنجاح: " + message +
+        " — دي نسخة تجريبية، ولسه محتاجة ربط بمحرك الذكاء الاصطناعي.";
+    }
+  </script>
+</body>
+</html>
